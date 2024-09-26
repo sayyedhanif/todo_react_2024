@@ -1,32 +1,47 @@
 import React, { useState } from 'react';
+import './styles.css';
 
 const AddTodo = ({ addTodo }) => {
-    const [newTodoText, setNewTodoText] = useState('');
+  const [newTodoText, setNewTodoText] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-    const handleAddTodo = () => {
-        if (newTodoText.trim()) {
-            addTodo(newTodoText.trim());
-            setNewTodoText('');
-        }
-    };
+  const handleAddTodo = () => {
+    if (newTodoText.trim()) {
+      addTodo(newTodoText.trim());
+      setNewTodoText('');
+    }
+    else {
+      setErrorMessage('Please enter a todo!');
+      setTimeout(() => {
+        setErrorMessage('');
+      }, 3000);
+    }
+  };
+  const handleInputChange = (e) => {
+    setNewTodoText(e.target.value);
+    if (errorMessage) {
+      setErrorMessage('');
+    }
+  };
+  return (
+    <><div className="addTodoContainer">
+      <input
+        type="text"
+        value={newTodoText}
 
-    return (
-        <div className="mb-4">
-            <input
-                type="text"
-                value={newTodoText}
-                onChange={(e) => setNewTodoText(e.target.value)}
-                placeholder="Add a new todo"
-                className="p-2 border w-full rounded"
-            />
-            <button
-                onClick={handleAddTodo}
-                className="mt-2 p-2 bg-blue-500 text-white w-full rounded hover:bg-blue-600"
-            >
-                Add Todo
-            </button>
-        </div>
-    );
+        onChange={handleInputChange}
+        placeholder="Add a new todo"
+        className="addTodoInput"
+      />
+      <button
+        onClick={handleAddTodo}
+        className="addTodoButton"
+      >
+        +
+      </button>
+    </div>
+      {errorMessage && <div className="errorMessage">{errorMessage}</div>}</>
+  );
 };
 
 export default AddTodo;

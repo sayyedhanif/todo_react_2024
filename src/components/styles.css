@@ -1,0 +1,124 @@
+.addTodoContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.addTodoInput {
+  padding: 8px;
+  border: 1px solid #ccc;
+  width: 90%;
+  border-radius: 4px;
+}
+
+.addTodoButton {
+  padding: 4px;
+  background-color: #007bff;
+  color: white;
+  margin-left: 5px;
+  width: 40px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.errorMessage{
+  color: red;
+  font-size: 10px;
+  padding: 2px;
+  text-align: left;
+}
+.filterContainer {
+  margin: 16px 0;
+  text-align: left;
+}
+
+.filterSelect {
+  padding: 8px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 50%;
+}
+
+.noTodosText {
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+}
+
+.todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.todoItemText {
+  flex-grow: 1;
+  text-align: left;
+  cursor: pointer;
+}
+
+.todoItemCompleted {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.deleteButton {
+  color: red;
+  cursor: pointer;
+  font-weight: bold;
+}
+.todoAppContainer {
+  width: 50%;
+  margin: 32px auto;
+  padding: 16px;
+  background-color: #faefdc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.todoAppTitle {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 8px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.todoItemText {
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.todoItemCompleted {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.deleteButton {
+  color: red;
+  cursor: pointer;
+  font-weight: bold;
+}
